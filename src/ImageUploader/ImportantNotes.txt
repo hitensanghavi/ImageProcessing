@@ -1,0 +1,31 @@
+﻿Delivery Requirements - 
+    - Testing
+    - Exceptions & Handling
+    - Logging - configurable for testing vs live
+    - Documentation - 
+
+Libraries - 
+NUGET - 
+WindowsAzure.Storage v8.1.1
+Microsoft.AspNetCore.StaticFiles v1.13.1
+
+
+References - 
+System. Core (4.0.0)
+System. Drawing (4.0.0)
+System. Drawing. Design (4.0.0)
+
+Project.json -
+
+  "frameworks": {
+    "net462": {
+      "dependencies": {
+      },
+      "imports": "dnxcore50",
+      "frameworkAssemblies": {
+        "System.Drawing": "4.0.0.0",
+        "System.Drawing.Design": "4.0.0.0"
+      }
+    }
+  },
+

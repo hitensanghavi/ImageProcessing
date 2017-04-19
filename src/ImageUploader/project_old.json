@@ -1,25 +1,25 @@
-﻿{
+{
   "dependencies": {
-    "BundlerMinifier.Core": "2.4.337",
-    "Microsoft.AspNetCore.Diagnostics": "1.1.1",
-    "Microsoft.AspNetCore.Mvc": "1.1.2",
     "Microsoft.AspNetCore.Razor.Tools": {
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.AspNetCore.Routing": "1.1.1",
+    "WindowsAzure.Storage": "8.1.1",
+
+    "Newtonsoft.Json": "10.0.1",
+    "BundlerMinifier.Core": "2.4.337",
+    "Microsoft.AspNetCore.Diagnostics": "1.1.1",
+    "Microsoft.AspNetCore.Mvc": "1.1.2",
     "Microsoft.AspNetCore.Server.IISIntegration": "1.1.1",
     "Microsoft.AspNetCore.Server.Kestrel": "1.1.1",
     "Microsoft.AspNetCore.StaticFiles": "1.1.1",
-    "Microsoft.Azure.DocumentDB": "1.13.1",
     "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.1.1",
     "Microsoft.Extensions.Configuration.Json": "1.1.1",
     "Microsoft.Extensions.Logging": "1.1.1",
     "Microsoft.Extensions.Logging.Console": "1.1.1",
     "Microsoft.Extensions.Logging.Debug": "1.1.1",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.1",
-    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.1.0",
-    "WindowsAzure.Storage": "8.1.1"
+    "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.1.0"
   },
 
   "tools": {
@@ -27,17 +27,21 @@
     "Microsoft.AspNetCore.Server.IISIntegration.Tools": "1.0.0-preview2-final"
   },
 
-
   "frameworks": {
-    "net462": {
+    "netcoreapp1.0": {
+      "imports": [
+        "dotnet5.6",
+        "dnxcore50",
+        "portable-net45+win8"
+      ],
       "dependencies": {
-      },
-      "imports": "dnxcore50",
-      "frameworkAssemblies": {
-        "System.Drawing": "4.0.0.0",
-        "System.Drawing.Design": "4.0.0.0"
+        "Microsoft.NETCore.App": {
+          "version": "1.0.0-preview2-final",
+          "type": "platform"
+        }
       }
-    }
+    },
+    "net461": {}
   },
 
   "buildOptions": {
@@ -54,7 +58,8 @@
   "publishOptions": {
     "include": [
       "wwwroot",
-      "**/*.cshtml",
+      "Views",
+      "Areas/**/Views",
       "appsettings.json",
       "web.config"
     ]
@@ -65,4 +70,3 @@
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
-
