@@ -4,6 +4,8 @@
     - Logging - configurable for testing vs live
     - Documentation - 
 
+	- Use Azure emulator for development and testing - https://docs.microsoft.com/en-us/azure/storage/storage-use-emulator
+
 Libraries - 
 NUGET - 
 WindowsAzure.Storage v8.1.1
@@ -15,7 +17,7 @@ System. Core (4.0.0)
 System. Drawing (4.0.0)
 System. Drawing. Design (4.0.0)
 
-Project.json -
+Project.json changes -
 
   "frameworks": {
     "net462": {

@@ -7,6 +7,7 @@ using Microsoft.Azure;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 
+
 namespace ImageUploader.Core
 {
     public class AzureTableManager
@@ -255,4 +256,4 @@ namespace ImageUploader.Core
         }
     }
 }
-}
+

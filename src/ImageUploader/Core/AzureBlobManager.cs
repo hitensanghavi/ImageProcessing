@@ -139,5 +139,6 @@ namespace ImageUploader.Core
 
             return blockBlob;
         }
+        
     }
 }
