@@ -35,7 +35,5 @@ namespace ImageUploader.Core
             return JsonConvert.DeserializeObject<T>(json);
         }
 
-        
-
     }
 }
